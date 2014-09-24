@@ -5,32 +5,36 @@
 L.Circle.SECTIONS_COUNT = 64;
 
 /**
- * @param  {Number?} vertices
+ * Static
+ * @param  {L.Circle} circle
+ * @param  {Number?}  vertices
+ * @param  {L.Map?}   map
  * @return {Array.<L.LatLng>}
  */
-L.Circle.prototype.toPolygon = function(vertices) {
-    if (!this._map) {
+L.Circle.toPolygon = function(circle, vertices, map) {
+    map = map || circle._map;
+    if (!map) {
         throw Error("Can't figure out points without adding the feature to the map");
     }
 
     var points = [],
-        crs = this._map.options.crs,
+        crs = map.options.crs,
         DOUBLE_PI = Math.PI * 2,
         angle = 0.0,
         projectedCentroid, radius,
         point, project, unproject;
 
     if (crs === L.CRS.EPSG3857) {
-        project = this._map.latLngToLayerPoint.bind(this._map);
-        unproject = this._map.layerPointToLatLng.bind(this._map);
-        radius = this._radius;
+        project = map.latLngToLayerPoint.bind(map);
+        unproject = map.layerPointToLatLng.bind(map);
+        radius = circle._radius;
     } else { // especially if we are using Proj4Leaflet
         project = crs.projection.project.bind(crs.projection);
         unproject = crs.projection.unproject.bind(crs.projection);
-        radius = this._mRadius;
+        radius = circle._mRadius;
     }
 
-    projectedCentroid = project(this._latlng)
+    projectedCentroid = project(circle._latlng)
 
     vertices = vertices || L.Circle.SECTIONS_COUNT;
 
@@ -44,4 +48,14 @@ L.Circle.prototype.toPolygon = function(vertices) {
     }
 
     return points;
+};
+
+/**
+ * As a method
+ * @param  {Number?} vertices
+ * @param  {L.Map?}  map
+ * @return {Array.<L.LatLng>}
+ */
+L.Circle.prototype.toPolygon = function(vertices, map) {
+    return L.Circle.toPolygon(this, vertices, map || this._map);
 };
