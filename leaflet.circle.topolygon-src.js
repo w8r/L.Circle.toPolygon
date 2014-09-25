@@ -38,12 +38,15 @@ L.Circle.toPolygon = function(circle, vertices, map) {
 
     vertices = vertices || L.Circle.SECTIONS_COUNT;
 
-    for (var i = 0; i < vertices; i++) {
-        angle += (DOUBLE_PI / vertices);
+    for (var i = 0; i < vertices - 1; i++) {
+        angle -= (DOUBLE_PI / vertices); // clockwise
         point = new L.Point(
             projectedCentroid.x + (radius * Math.cos(angle)),
             projectedCentroid.y + (radius * Math.sin(angle))
         );
+        if (i > 0 && point.equals(points[i - 1])) {
+            continue;
+        }
         points.push(unproject(point));
     }
 
