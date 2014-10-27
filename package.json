@@ -23,8 +23,10 @@
         "url": "https://github.com/w8r/Leaflet.Circle.toPolygon/issues"
     },
     "homepage": "https://github.com/w8r/Leaflet.Circle.toPolygon",
-    "devDependencies": {
+    "dependencies": {
         "leaflet": "^0.7.3",
+    },
+    "devDependencies": {
         "uglifyjs": "^2.3.6"
     }
 }
