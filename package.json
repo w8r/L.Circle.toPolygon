@@ -24,7 +24,7 @@
     },
     "homepage": "https://github.com/w8r/Leaflet.Circle.toPolygon",
     "dependencies": {
-        "leaflet": "^0.7.3",
+        "leaflet": "^0.7.3"
     },
     "devDependencies": {
         "uglifyjs": "^2.3.6"
