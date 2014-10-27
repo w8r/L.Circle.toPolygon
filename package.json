@@ -1,0 +1,25 @@
+{
+  "name": "Leaflet.Circle.toPolygon",
+  "version": "1.0.0",
+  "description": "Interpolate circle to polygon for GeoJSON",
+  "main": "leaflet.circle.topolygon-min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w8r/Leaflet.Circle.toPolygon.git"
+  },
+  "keywords": [
+    "leaflet",
+    "circle",
+    "polygon",
+    "interpolation"
+  ],
+  "author": "Alexander Milevski <info@w8r.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w8r/Leaflet.Circle.toPolygon/issues"
+  },
+  "homepage": "https://github.com/w8r/Leaflet.Circle.toPolygon"
+}
