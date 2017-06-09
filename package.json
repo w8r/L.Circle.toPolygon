@@ -22,7 +22,7 @@
         "url": "https://github.com/w8r/Leaflet.Circle.toPolygon/issues"
     },
     "homepage": "https://github.com/w8r/Leaflet.Circle.toPolygon",
-    "dependencies": {
+    "peerDependencies": {
         "leaflet": "^0.7.3"
     },
     "devDependencies": {
