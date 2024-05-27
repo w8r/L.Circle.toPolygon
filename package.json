@@ -1,6 +1,6 @@
 {
     "name": "leaflet-circle-to-polygon",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Interpolate circle to polygon for GeoJSON",
     "main": "leaflet.circle.topolygon-src.js",
     "scripts": {
