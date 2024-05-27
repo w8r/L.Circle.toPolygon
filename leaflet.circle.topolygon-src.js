@@ -61,7 +61,7 @@
 
         vertices = vertices || L.Circle.SECTIONS_COUNT;
 
-        for (var i = 0; i < vertices - 1; i++) {
+        for (var i = 0; i < vertices; i++) {
             angle -= (DOUBLE_PI / vertices); // clockwise
             point = new L.Point(
                 projectedCentroid.x + (radius * Math.cos(angle)),
