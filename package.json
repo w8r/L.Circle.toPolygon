@@ -1,31 +1,31 @@
 {
-    "name": "leaflet-circle-to-polygon",
-    "version": "1.0.1",
-    "description": "Interpolate circle to polygon for GeoJSON",
-    "main": "leaflet.circle.topolygon-src.js",
-    "scripts": {
-        "build": "uglifyjs leaflet.circle.topolygon-src.js -m > leaflet.circle.topolygon-min.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/w8r/Leaflet.Circle.toPolygon.git"
-    },
-    "keywords": [
-        "leaflet",
-        "circle",
-        "polygon",
-        "interpolation"
-    ],
-    "author": "Alexander Milevski <info@w8r.name>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/w8r/Leaflet.Circle.toPolygon/issues"
-    },
-    "homepage": "https://github.com/w8r/Leaflet.Circle.toPolygon",
-    "peerDependencies": {
-        "leaflet": "^0.7.3"
-    },
-    "devDependencies": {
-        "uglifyjs": "^2.3.6"
-    }
+  "name": "leaflet-circle-to-polygon",
+  "version": "1.0.1",
+  "description": "Interpolate circle to polygon for GeoJSON",
+  "main": "leaflet.circle.topolygon-src.js",
+  "scripts": {
+    "build": "uglifyjs leaflet.circle.topolygon-src.js -m > leaflet.circle.topolygon-min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w8r/Leaflet.Circle.toPolygon.git"
+  },
+  "keywords": [
+    "leaflet",
+    "circle",
+    "polygon",
+    "interpolation"
+  ],
+  "author": "Alexander Milevski <alex@milevski.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w8r/Leaflet.Circle.toPolygon/issues"
+  },
+  "homepage": "https://github.com/w8r/Leaflet.Circle.toPolygon",
+  "peerDependencies": {
+    "leaflet": "*"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
+  }
 }
